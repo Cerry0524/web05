@@ -12,4 +12,7 @@ class Poster extends DB
         ];
         return $this->view("./view/backend/poster.php",$view);
     }
+    function show(){
+        return $this->paginate(4,['sh'=>1]," order by `rank` desc");
+    }
 }

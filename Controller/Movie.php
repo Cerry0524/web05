@@ -6,10 +6,15 @@ class Movie extends DB
     {
         parent::__construct('movie');
     }
-    function backend(){
-        $view=[
-            'rows'=>$this->all(),
+    function backend()
+    {
+        $view = [
+            'rows' => $this->all(),
         ];
-        return $this->view("./view/backend/movie.php",$view);
+        return $this->view("./view/backend/movie.php", $view);
+    }
+    function show()
+    {
+        return $this->paginate(4,['sh'=>1]," order by `rank` desc");
     }
 }
