@@ -3,7 +3,7 @@ class DB
 {
     protected $table;
     protected $pdo;
-    protected $dsn = 'mysql:local=localhost;charset=utf8;dbname=db02';
+    protected $dsn = 'mysql:local=localhost;charset=utf8;dbname=db05';
     protected $links;
 
     function __construct($table)

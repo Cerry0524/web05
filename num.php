@@ -58,7 +58,15 @@ INSERT INTO `orders` (`id`, `no`, `date`, `session`, `seats`, `movie`) VALUES (N
 INSERT INTO `orders` (`id`, `no`, `date`, `session`, `seats`, `movie`) VALUES (NULL, '202308260018', '20230828', '18:00~20:00', 'a:2:{i:0;i:18;i:1;i:19;}', '線院片05');
 INSERT INTO `orders` (`id`, `no`, `date`, `session`, `seats`, `movie`) VALUES (NULL, '202308260019', '20230826', '20:00~22:00', 'a:1:{i:0;i:20;}', '線院片08');
 
-
+UPDATE `poster` SET `rank`='1' WHERE `id`='1';
+UPDATE `poster` SET `rank`='2' WHERE `id`='2';
+UPDATE `poster` SET `rank`='3' WHERE `id`='3';
+UPDATE `poster` SET `rank`='4' WHERE `id`='4';
+UPDATE `poster` SET `rank`='5' WHERE `id`='5';
+UPDATE `poster` SET `rank`='6' WHERE `id`='6';
+UPDATE `poster` SET `rank`='7' WHERE `id`='7';
+UPDATE `poster` SET `rank`='8' WHERE `id`='8';
+UPDATE `poster` SET `rank`='9' WHERE `id`='9';
 
 
 
