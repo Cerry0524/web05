@@ -33,6 +33,13 @@
 <script>
     getMovie()
 
+    $("#movie").change(function(){
+        getDate($(this).val());
+    })
+    $("#date").change(function(){
+        getSession($("#movie option:selected").text(),$(this).val());
+    })
+
     function getMovie() {
         $.get("./api/getMovie.php", (movie) => {
             $("#movie").html(movie);
@@ -44,4 +51,19 @@
 
         })
     };
+    
+    function getDate(movieId){
+        $.get("./api/getDate.php",{movieId},(date)=>{
+            $("#date").html(date);
+
+            getSession($("#movie option:selected").text(),$("#date").val());
+
+        })
+    }
+    function getSession(movie,date){
+        $.get("./api/getSession.php",{movie,date},(session)=>{
+            console.log(session);
+            $("#session").html(session);
+        })
+    }
 </script>
