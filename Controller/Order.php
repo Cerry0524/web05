@@ -6,10 +6,18 @@ class Order extends DB
     {
         parent::__construct('orders');
     }
-    function backend(){
-        $view=[
-            'rows'=>$this->all(),
+    function backend()
+    {
+        $view = [
+            'rows' => $this->all(),
         ];
-        return $this->view("./view/backend/order.php",$view);
+        return $this->view("./view/backend/order.php", $view);
+    }
+    function front()
+    {
+        $view = [
+            'rows' => $this->all(),
+        ];
+        return $this->view("./view/front/order.php", $view);
     }
 }
